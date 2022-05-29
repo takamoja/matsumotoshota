@@ -17,7 +17,7 @@ export default function News({ articles }: Props) {
             </Head>
             <main>
                 <h1>ここはニュースページです</h1>
-                <ul>
+                <ul className="list-disc list-inside">
                     {articles.map(article => (
                         <li key={article.id}>
                             <Link href={`/news/${article.id}`}>

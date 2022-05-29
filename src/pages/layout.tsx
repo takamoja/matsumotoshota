@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 const Layout = ({ children }: Props) => {
     return (
         <div>
-            <nav className="flex flex-rows p-2 bg-red-500 text-white font-bold">
+            <nav className="flex flex-rows gap-x-4 p-2 font-bold">
                 <Link href="/">
                     <a href="">Home</a>
                 </Link>
@@ -15,7 +15,7 @@ const Layout = ({ children }: Props) => {
                     <a href="">News</a>
                 </Link>
             </nav>
-            {children}
+            <div className="p-4">{children}</div>
         </div>
     );
 };
