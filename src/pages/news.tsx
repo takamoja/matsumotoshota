@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import { client } from '../../libs/client';
 import type { Article } from '../../types/article';
@@ -19,12 +20,9 @@ export default function News({ articles }: Props) {
                 <ul>
                     {articles.map(article => (
                         <li key={article.id}>
-                            <h2>{article.title}</h2>
-                            <div
-                                dangerouslySetInnerHTML={{
-                                    __html: `${article.body}`,
-                                }}
-                            />
+                            <Link href={`/news/${article.id}`}>
+                                <a>{article.title}</a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
