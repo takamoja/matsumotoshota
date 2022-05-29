@@ -33,7 +33,7 @@ export default function News({ articles }: Props) {
     );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     const data = await client.get({ endpoint: 'article' });
 
     return {
