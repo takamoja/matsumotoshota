@@ -20,9 +20,7 @@ export default function News({ articles }: Props) {
                 <ul className="list-disc list-inside">
                     {articles.map(article => (
                         <li key={article.id}>
-                            <Link href={`/news/${article.id}`}>
-                                <a>{article.title}</a>
-                            </Link>
+                            <Link href={`/news/${article.id}`}>{article.title}</Link>
                         </li>
                     ))}
                 </ul>
